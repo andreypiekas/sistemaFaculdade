@@ -7,5 +7,12 @@ public class ServicosGerais extends Administrativo {
 		// TODO Auto-generated constructor stub
 	}
 
-
+	
+	public double getBonificacao() {
+		return super.getSalario() * 0.10;
+		
+	}
+	
+	
+	
 }

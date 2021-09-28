@@ -38,6 +38,12 @@ public class Administrativo {
 	public String getVinculo() {
 		return vinculo;
 	}
+	
+	
+	public double getBonificacao() {
+		return salario * 0.05;
+		
+	}
 
 	
 	

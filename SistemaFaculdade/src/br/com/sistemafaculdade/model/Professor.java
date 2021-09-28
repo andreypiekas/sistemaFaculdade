@@ -8,5 +8,12 @@ public class Professor extends Administrativo {
 	}
 	
 
+	public double getBonificacao() {
+		return super.getSalario() * 0.20;
+		
+	}
+	
+	
+	
 
 }

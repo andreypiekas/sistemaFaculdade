@@ -5,9 +5,9 @@ import br.com.sistemafaculdade.model.*;
 public class Teste {
 	public static void main(String[] args) {
 		
-		Administrativo f1 = new Administrativo ("Andrey Piekas", 123456787L, 3000, "Administrativo");
-		ServicosGerais f2 = new ServicosGerais("Lucas Antonio", 123456786L, 1500, "Serviços Gerais");
-		Professor f3 = new Professor("Joao Almeida", 123456785L, 750, "Professor");
+		Administrativo f1 = new Administrativo ("Andrey Piekas", 123456787L, 1000, "adm");
+		ServicosGerais f2 = new ServicosGerais("Lucas Antonio", 123456786L, 1000, "sg");
+		Professor f3 = new Professor("Joao Almeida", 123456785L, 1000, "prof");
 		
 	
 
@@ -15,6 +15,24 @@ public class Teste {
 		System.out.println(f1.getNomeCompleto());
 		System.out.println(f2.getNomeCompleto());
 		System.out.println(f3.getNomeCompleto());
+		
+		System.out.println();
+		
+		
+		System.out.println(f1.getBonificacao());
+		System.out.println(f2.getBonificacao());
+		System.out.println(f3.getBonificacao());
+		
+		System.out.println("O salário novo é de R$" + (f1.getBonificacao() + f1.getSalario()));
+		System.out.println("O salário novo é de R$" + (f2.getBonificacao() + f2.getSalario()));
+		System.out.println("O salário novo é de R$" + (f3.getBonificacao() + f3.getSalario()));
+		
+		
+
+		
+		
+		
+		
 	}
 
 }
