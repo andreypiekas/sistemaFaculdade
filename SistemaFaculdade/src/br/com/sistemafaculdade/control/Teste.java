@@ -16,6 +16,7 @@ public class Teste {
 		System.out.println(f1.getNomeCompleto());
 		System.out.println(f2.getNomeCompleto());
 		System.out.println(f3.getNomeCompleto());
+		System.out.println();
 		
 		System.out.println();
 		f3.setHoras(10);
@@ -23,6 +24,7 @@ public class Teste {
 		System.out.println(f1.getBonificacao());
 		System.out.println(f2.getBonificacao());
 		System.out.println(f3.getBonificacao());
+		System.out.println();
 		
 		System.out.println("O salário novo é de R$" + (f1.getBonificacao() + f1.getSalario()));
 		System.out.println("O salário novo é de R$" + (f2.getBonificacao() + f2.getSalario()));
@@ -33,6 +35,10 @@ public class Teste {
 		System.out.println(Gastos.getGastosIndividual(f3));
 		
 		//Testando as horas do professor
+		
+		System.out.println(f3.getHoras());
+		f3.setHoras(10);
+		System.out.println();
 //		
 //		System.out.println(f3.getSalario());
 //		System.out.println(f3.getHoras());
