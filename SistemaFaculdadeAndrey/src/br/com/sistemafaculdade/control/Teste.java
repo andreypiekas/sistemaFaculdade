@@ -2,8 +2,11 @@ package br.com.sistemafaculdade.control;
 
 
 import br.com.sistemafaculdade.model.Administrativo;
+import br.com.sistemafaculdade.model.Diretor;
+import br.com.sistemafaculdade.model.Funcionarios;
 import br.com.sistemafaculdade.model.Professor;
 import br.com.sistemafaculdade.model.ServicosGerais;
+
 
 public class Teste {
 	public static void main(String[] args) {
@@ -43,6 +46,44 @@ public class Teste {
 //		System.out.println(f3.getSalario());
 //		System.out.println(f3.getHoras());
 
+		
+		
+		//Testando um diretor
+		Diretor f4 = new  Diretor("Daniela Soares", 329201939230L, 10000, "dir");
+		System.out.println("A bonificacao do diretor é de R$" + (f4.getBonificacao()));
+		System.out.println();
+		
+		//Testar a classe gastos
+		System.out.println(Gastos.getGastosIndividual(f4));
+		System.out.println();
+		
+		//Testar Gastos
+		//Posso passar varios funcionarios, inclusive diferentes 
+		System.out.println(Gastos.somarGastos(f4));
+		System.out.println(Gastos.somarGastos(f3));
+		System.out.println(Gastos.somarGastos(f2));
+		System.out.println(Gastos.somarGastos(f1));
+		System.out.println();
+		Gastos.resetGastos();
+
+		
+		//Chamando funcoes sem impressao e imprimindo somente a ultima
+		Gastos.somarGastos(f4);
+		Gastos.somarGastos(f3);
+		Gastos.somarGastos(f2);
+		System.out.printf("Os gastos totais são de R$ %.2f \n", Gastos.somarGastos(f1));
+		Gastos.resetGastos();
+
+		
+
+		//E se quisse os gastos com diretor e administador
+		Gastos.somarGastos(f4);
+		System.out.printf("Os gastos somente do diretor e do adm são de R$ %.2f \n", Gastos.somarGastos(f4));
+		Gastos.resetGastos();
+		
+//		System.out.printf("O valor do vale transporte do adm é de R$ %.2f \n");
+//		System.out.printf("O valor do vale transporte dos serviços gerais é de R$ %.2f \n");
+		
 		
 		
 	}

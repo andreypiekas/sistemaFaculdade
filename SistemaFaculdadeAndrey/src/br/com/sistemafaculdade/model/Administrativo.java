@@ -15,6 +15,15 @@ public class Administrativo extends Funcionarios {
 		
 	}
 
+	public double getGastos() {
+		return getSalario() + getBonificacao();
+	}
+	
+	//Anotação de sobreescrita
+	@Override
+	public double GetValeTransporte() {
+		return getSalario() * 0.06;
+	}
 	
 	
 }

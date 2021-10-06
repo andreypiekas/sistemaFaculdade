@@ -17,6 +17,11 @@ public class ServicosGerais extends Funcionarios {
 		return super.getSalario() * percBonificacao;
 		
 	}
-		
+	
+	//Anotação de sobreescrita
+	@Override
+	public double GetValeTransporte() {
+		return 200;
+	}
 	
 }

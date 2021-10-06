@@ -41,9 +41,13 @@ public abstract class Funcionarios {
 		}
 		
 		//O jeito antigo de fazer polimorfismo
-		public double getBonificacao() {
-			return -1;
-		}
+		//O jeito correto de fazer polimorfismo é criar um metodo abstrato
+		public abstract double getBonificacao();
 
+
+//		public double GetValeTransporte() {
+//			// TODO Auto-generated method stub
+//			return 0;
+//		}
 
 }
