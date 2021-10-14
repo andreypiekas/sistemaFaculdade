@@ -1,6 +1,6 @@
 package br.com.sistemafaculdade.model;
 
-public class Administrativo extends Funcionarios {
+public class Administrativo extends Funcionarios implements AplicavelVT {
 	
 	private double percBonificacao = 0.05;
 
@@ -18,12 +18,19 @@ public class Administrativo extends Funcionarios {
 	public double getGastos() {
 		return getSalario() + getBonificacao();
 	}
-	
-	//Anotação de sobreescrita
+
+
 	@Override
-	public double GetValeTransporte() {
+	public double getValeTransporte() {
+		// TODO Auto-generated method stub
 		return getSalario() * 0.06;
 	}
+	
+//	//Anotação de sobreescrita
+//	@Override
+//	public double GetValeTransporte() {
+//		return getSalario() * 0.06;
+//	}
 	
 	
 }

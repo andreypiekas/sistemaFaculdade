@@ -6,6 +6,7 @@ import br.com.sistemafaculdade.model.Diretor;
 import br.com.sistemafaculdade.model.Funcionarios;
 import br.com.sistemafaculdade.model.Professor;
 import br.com.sistemafaculdade.model.ServicosGerais;
+import br.com.sistemafaculdade.model.Vigia;
 
 
 public class Teste {
@@ -14,6 +15,7 @@ public class Teste {
 		Administrativo f1 = new Administrativo ("Andrey Piekas", 123456787L, 1000, "adm");
 		ServicosGerais f2 = new ServicosGerais("Lucas Antonio", 123456786L, 1000, "sg");
 		Professor f3 = new Professor("Joao Almeida", 123456785L, 0, "prof");	
+		Vigia f5 = new Vigia("Joaozinho", 123456786L, 1000, "vg");
 
 		//Testando se todas as classes tem o mesmo metodo
 		System.out.println(f1.getNomeCompleto());
@@ -35,7 +37,7 @@ public class Teste {
 	
 		
 		//Imprimindo os gastos
-		System.out.println(Gastos.getGastosIndividual(f3));
+		//System.out.println(Gastos.getGastosIndividual(f3));
 		
 		//Testando as horas do professor
 		
@@ -54,37 +56,60 @@ public class Teste {
 		System.out.println();
 		
 		//Testar a classe gastos
-		System.out.println(Gastos.getGastosIndividual(f4));
+		//System.out.println(Gastos.getGastosIndividual(f4));
 		System.out.println();
 		
-		//Testar Gastos
-		//Posso passar varios funcionarios, inclusive diferentes 
-		System.out.println(Gastos.somarGastos(f4));
-		System.out.println(Gastos.somarGastos(f3));
-		System.out.println(Gastos.somarGastos(f2));
-		System.out.println(Gastos.somarGastos(f1));
+//		//Testar Gastos
+//		//Posso passar varios funcionarios, inclusive diferentes 
+//		System.out.println(Gastos.somarGastos(f4));
+//		System.out.println(Gastos.somarGastos(f3));
+//		System.out.println(Gastos.somarGastos(f2));
+//		System.out.println(Gastos.somarGastos(f1));
+//		System.out.println();
+//		Gastos.resetGastos();
+
+		
+//		//Chamando funcoes sem impressao e imprimindo somente a ultima
+//		Gastos.somarGastos(f4);
+//		Gastos.somarGastos(f3);
+//		Gastos.somarGastos(f2);
+//		System.out.printf("Os gastos totais são de R$ %.2f \n", Gastos.somarGastos(f1));
+//		Gastos.resetGastos();
+
+		
+
+//		//E se quisse os gastos com diretor e administador
+//		Gastos.somarGastos(f4);
+//		System.out.printf("Os gastos somente do diretor e do adm são de R$ %.2f \n", Gastos.somarGastos(f1));
+//		Gastos.resetGastos();
+//		
+		
 		System.out.println();
-		Gastos.resetGastos();
-
 		
-		//Chamando funcoes sem impressao e imprimindo somente a ultima
-		Gastos.somarGastos(f4);
-		Gastos.somarGastos(f3);
-		Gastos.somarGastos(f2);
-		System.out.printf("Os gastos totais são de R$ %.2f \n", Gastos.somarGastos(f1));
-		Gastos.resetGastos();
-
 		
-
-		//E se quisse os gastos com diretor e administador
-		Gastos.somarGastos(f4);
-		System.out.printf("Os gastos somente do diretor e do adm são de R$ %.2f \n", Gastos.somarGastos(f4));
+		//Testando o que se encontra com getClass
+		System.out.println(f4.getClass().getSimpleName());
+		System.out.println(f1.getClass().getSimpleName().equals("Administrativo"));
+		
+		
+//		//Testando se o programa entra na parte de adm ou servicogerais
+//		Gastos.somarGastos(f1);
+		
+		System.out.println();
+		
+		///testando o novo metodo com interface
 		Gastos.resetGastos();
+		System.out.println(f5.getClass().getSimpleName());
+		Gastos.somarGastosComVT(f5);
+		Gastos.getGastosComSalario(f5);
+		Gastos.getGastosComBonificacao(f5);
+		System.err.println(Gastos.somarGastos());
+		
 		
 //		System.out.printf("O valor do vale transporte do adm é de R$ %.2f \n");
 //		System.out.printf("O valor do vale transporte dos serviços gerais é de R$ %.2f \n");
 		
-
+		
 		
 	}
 
