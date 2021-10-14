@@ -4,6 +4,7 @@ public interface AplicavelVT {
 	public double getValeTransporte();
 
 
+
 	
 
 }

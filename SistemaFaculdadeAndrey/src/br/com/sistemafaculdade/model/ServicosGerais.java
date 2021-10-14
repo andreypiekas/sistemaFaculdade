@@ -22,7 +22,7 @@ public class ServicosGerais extends Funcionarios implements AplicavelVT {
 	@Override
 	public double getValeTransporte() {
 		// TODO Auto-generated method stub
-		return 200;
+		return AplicavelVTUtil.getVALORVT();
 	}
 	
 	//Anotação de sobreescrita

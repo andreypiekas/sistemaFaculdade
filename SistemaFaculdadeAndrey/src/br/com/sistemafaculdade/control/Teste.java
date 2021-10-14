@@ -1,6 +1,7 @@
 package br.com.sistemafaculdade.control;
 
 
+import java.util.*;
 import br.com.sistemafaculdade.model.Administrativo;
 import br.com.sistemafaculdade.model.Diretor;
 import br.com.sistemafaculdade.model.Funcionarios;
@@ -15,7 +16,6 @@ public class Teste {
 		Administrativo f1 = new Administrativo ("Andrey Piekas", 123456787L, 1000, "adm");
 		ServicosGerais f2 = new ServicosGerais("Lucas Antonio", 123456786L, 1000, "sg");
 		Professor f3 = new Professor("Joao Almeida", 123456785L, 0, "prof");	
-		Vigia f5 = new Vigia("Joaozinho", 123456786L, 1000, "vg");
 
 		//Testando se todas as classes tem o mesmo metodo
 		System.out.println(f1.getNomeCompleto());
@@ -99,11 +99,23 @@ public class Teste {
 		
 		///testando o novo metodo com interface
 		Gastos.resetGastos();
+		System.out.println(f2.getClass().getSimpleName());
+		Gastos.somarGastosComVT(f2);
+		Gastos.getGastosComSalario(f2);
+		Gastos.getGastosComBonificacao(f2);
+		System.out.println(Gastos.somarGastos());
+		
+		
+		//testando vigia
+		//Repare como vigia so esta definido que é uma classe aplicavel o VT
+		Gastos.resetGastos();
+		Vigia f5 = new Vigia();
 		System.out.println(f5.getClass().getSimpleName());
 		Gastos.somarGastosComVT(f5);
-		Gastos.getGastosComSalario(f5);
-		Gastos.getGastosComBonificacao(f5);
-		System.err.println(Gastos.somarGastos());
+//		Gastos.getGastosComSalario(f5);
+//		Gastos.getGastosComBonificacao(f5);
+		System.out.println(Gastos.somarGastos());
+
 		
 		
 //		System.out.printf("O valor do vale transporte do adm é de R$ %.2f \n");
